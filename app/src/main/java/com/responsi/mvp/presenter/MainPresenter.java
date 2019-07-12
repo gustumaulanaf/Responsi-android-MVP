@@ -18,15 +18,16 @@ public class MainPresenter {
     MainVIiew mainVIiew;
     API api;
 
-    public MainPresenter(MainVIiew mainVIiew) {
+    public MainPresenter(MainVIiew mainVIiew , API api) {
         this.mainVIiew = mainVIiew;
+        this.api = api;
         if (baseURl==null){
             this.baseURl = new BaseURl();
 
         }
     }
     public void getPeople(){
-      API  api=BaseURl.getApi().create(API.class);
+
         api.getPeople().enqueue(new Callback<Response>() {
             @Override
             public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
