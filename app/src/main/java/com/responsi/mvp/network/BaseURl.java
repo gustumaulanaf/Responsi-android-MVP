@@ -12,7 +12,7 @@ import retrofit2.http.GET;
 public class BaseURl {
   public  static  final String  BASE_URL ="https://private-0e6b9-ganjarwidiatmansyah.apiary-mock.com/";
   public  static Retrofit retrofit = null;
-  public static  Retrofit getApi(){
+  public   API getApi(){
 
         if (retrofit==null){
             retrofit = new Retrofit.Builder()
@@ -21,6 +21,6 @@ public class BaseURl {
                     .build();
 
         }
-        return retrofit;
+        return retrofit.create(API.class);
   }
 }

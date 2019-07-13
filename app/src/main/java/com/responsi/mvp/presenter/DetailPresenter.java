@@ -2,10 +2,10 @@ package com.responsi.mvp.presenter;
 
 import android.util.Log;
 
+import com.responsi.mvp.Interfaces.DetailVIiew;
 import com.responsi.mvp.Interfaces.MainVIiew;
 import com.responsi.mvp.model.Response;
 import com.responsi.mvp.model.ResultsItem;
-import com.responsi.mvp.network.API;
 import com.responsi.mvp.network.BaseURl;
 
 import java.util.List;
@@ -13,10 +13,10 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 
-public class MainPresenter {
+public class DetailPresenter {
     BaseURl baseURl;
-    MainVIiew mainVIiew;
-    public MainPresenter(MainVIiew mainVIiew) {
+    DetailVIiew mainVIiew;
+    public DetailPresenter(DetailVIiew mainVIiew) {
         this.mainVIiew = mainVIiew;
         if (baseURl==null){
             this.baseURl = new BaseURl();
